@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RNNoise for WASM Demo</title>
+    <base target="_blank">
+    <style>
+        .full {
+            width: 100%;
+            height: 100%;
+        }
+        #vadProb {
+            width: 0;
+            height: 100%;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Setup</legend>
+
+        <table>
+            <tr>
+                <td><label for="input">Input</label></td>
+                <td><select id="input" disabled></select></td>
+            </tr>
+            <tr>
+                <td><label for="output">Output</label></td>
+                <td><select id="output" disabled></select></td>
+            </tr>
+        </table>
+        <button id="start" disabled>Start</button>
+    </fieldset>
+    <fieldset>
+        <legend>Status</legend>
+        <table class="full">
+            <tr>
+                <td>Voice Activity</td>
+                <td class="full">
+                    <div id="vadProb"></div>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="../dist/rnnoise-runtime.js"></script>
+    <script src="rnnoise.js"></script>
+</body>
+
+</html>

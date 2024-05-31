@@ -1,0 +1,10 @@
+{
+  "name": "rnnoise-wasm-simd",
+  "description": "RNNoise build for SIMD-WASM, audio-worklet use",
+  "author": "Dmitry Zlygin <dzlygin@gmail.com>",
+  "scripts": {
+    "build": "npm run fetch && ./build.sh",
+    "fetch": "if [ ! -d rnnoise ]; then git clone -b 2022.1.0 git@github.com:shiguredo/rnnoise.git --single-branch \n fi",
+    "start": "node demo/server.mjs"
+  }
+}
